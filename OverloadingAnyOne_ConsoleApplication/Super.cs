@@ -12,7 +12,7 @@ namespace OverloadingAnyOne_ConsoleApplication
         // statt in Unter_1 und Unter_2 die gleichen
         public static Super operator + (Super x, Super y)
         {
-            WriteLine("Hier werden 2 Super Objekte addiert");
+            WriteLine("Hier werden zwei Super Objekte addiert");
             return new Super();
         }
     }
@@ -21,7 +21,7 @@ namespace OverloadingAnyOne_ConsoleApplication
     {
         public static Unter_1 operator + (Unter_1 x, Unter_1 y)
         {
-            WriteLine("Hier werden 2 Unter_1 Objekte addiert");
+            WriteLine("Hier werden zwei Unter_1 Objekte addiert");
             return new Unter_1();
         }
     }
@@ -30,7 +30,7 @@ namespace OverloadingAnyOne_ConsoleApplication
     {
         public static Unter_2 operator + (Unter_2 x, Unter_2 y)
         {
-            WriteLine("Hier werden 2 Unter_2 Objekte addiert");
+            WriteLine("Hier werden zwei Unter_2 Objekte addiert");
             return new Unter_2();
         }
     }
