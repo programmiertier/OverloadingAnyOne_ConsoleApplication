@@ -10,9 +10,25 @@ namespace OverloadingAnyOne_ConsoleApplication
     class Super
     {
         // statt in Unter_1 und Unter_2 die gleichen
-        public static Super operator + (Super x, Super y)
+        // Object ist die oberste aller Klassen
+        public static Object operator + (Super x, Super y)
         {
             WriteLine("Hier werden zwei Super Objekte addiert");
+            // if (x.GetType() == typeof(Unter_1))
+            WriteLine("erster Parameter als {0}", x.GetType());
+            if (x.GetType().ToString() == "OverloadingAnyOne_ConsoleApplication_Unter1")
+            {
+                WriteLine("als Unter1 erkannt");
+                return new Unter_1();
+            }
+            WriteLine("{0}", x.GetType());
+            if (x.GetType().ToString() == "OverloadingAnyOne_ConsoleApplication_Unter2")
+            {
+                WriteLine("als Unter2 erkannt");
+                return new Unter_2();
+            }
+
+            WriteLine("Rückgabe als Super Objekt");
             return new Super();
         }
     }
